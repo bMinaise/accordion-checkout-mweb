@@ -1,0 +1,154 @@
+/* Sephora Styles */
+
+/* SEPHORA SPECIFIC FONT IMPORTS */
+@font-face {
+    font-family: 'Avalon-Book';
+    src: url('/fonts/avalon-book-webfont.eot');
+    src: url('/fonts/avalon-book-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avalon-book-webfont.woff2') format('woff2'), url('../fonts/avalon-book-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Avalon-Medium';
+    src: url('/fonts/avalon-medium-webfont.eot');
+    src: url('/fonts/avalon-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avalon-medium-webfont.woff2') format('woff2'), url('../fonts/avalon-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Avalon-Demi';
+    src: url('/fonts/avalon-demi-webfont.eot');
+    src: url('/fonts/avalon-demi-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avalon-demi-webfont.woff2') format('woff2'), url('../fonts/avalon-demi-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Avalon-Bold';
+    src: url('/fonts/avalon-bold-webfont.eot');
+    src: url('/fonts/avalon-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avalon-bold-webfont.woff2') format('woff2'), url('../fonts/avalon-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal
+}
+
+
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: left;
+}
+
+.navbar-brand {
+	font-size: 21px;
+	font-family: 'Avalon-Demi';
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: white !important;
+}
+
+hr {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #e4e4e4
+}
+
+/* TYPOGRAPHY */
+.avalon-book {
+    font-family: 'Avalon-Book';
+    font-weight: 400
+}
+
+.avalon-medium {
+    font-family: 'Avalon-Medium';
+    font-weight: 500;
+    letter-spacing: 3px
+}
+
+.avalon-demi {
+    font-family: 'Avalon-Demi';
+    font-weight: 600
+}
+
+.avalon-bold {
+    font-family: 'Avalon-Bold';
+    font-weight: 700;
+    letter-spacing: 4px
+}
+
+.addressOutputData {
+  padding-top: 10px;
+  padding-left: 35px;
+  font-weight: 300;
+  line-height: 13px;
+}
+
+
+/* BTN Styles */
+.btn {
+	padding: 13px 12px;
+	display: inline-block;
+	font-family: 'Avalon-Medium';
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	vertical-align: middle;
+	letter-spacing: 1px;
+	cursor: pointer;
+	border-radius: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+#checkoutContinue {
+/* 	float: right; */
+  width: 100%;
+}
+
+.btn-default {
+	color: #fff !important;
+	background-color: #c00;
+	border-color: rgba(0,0,0,0.05) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	background-image: -webkit-linear-gradient(top,#c00 0,#a30000 100%);
+	background-image: linear-gradient(to bottom,#c00 0,#a30000 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc0000',endColorstr='#ffa30000',GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
+}
+
+.btn-default a {
+	color: #ffffff !important;
+}
+
+.btn-default:hover {
+	color: #fff;
+	background-color: #000000;
+	border-color: rgba(0,0,0,0.05) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	background-image: -webkit-linear-gradient(top,#000 0,#000000 100%);
+	background-image: linear-gradient(to bottom,#000 0,#000000 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc0000',endColorstr='#ffa30000',GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
+}
+
+/* Hide Stuff */
+#shippingMethod {
+/* 	display: none; */
+}
