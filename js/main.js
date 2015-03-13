@@ -20,7 +20,7 @@ if (typeof jQuery === 'undefined') {
 //onLoad fire function == put misc. stuff here
 +function ($) {
  	//console.log('');
- 	javascript:(function(){var s=document.createElement("script");s.onload=function(){bootlint.showLintReportForCurrentDocument([]);};s.src="https://maxcdn.bootstrapcdn.com/bootlint/latest/bootlint.min.js";document.body.appendChild(s)})();
+
 /*
  	$('#collapseOne').collapse({
   	toggle: true
@@ -33,7 +33,7 @@ if (typeof jQuery === 'undefined') {
 //window session storage and localStorage 
 //session will expire on page close, localStorage should not
 window.onload  = function(){
-	loadvalues();
+	//loadvalues();
 	
 	
 	// this invokes a callback once the div of a specific id 
@@ -43,7 +43,7 @@ window.onload  = function(){
 				//MAKE THIS OPEN THE PANEL AND HIDE THE OUTPUT DATA
 
 		//savethestuffSession();
- 	$('form').submit(false);
+ 	//$('form').submit(false);
 
 		$("#collapseOne").collapse();
 						
@@ -54,7 +54,7 @@ window.onload  = function(){
 function loadvalues(){
 	//getthestuffSession(); //get the session storage data
 	//getthestuffLocal(); //get the local storage data
-	getCheckoutAddress();
+	//getCheckoutAddress();
 	
 	//savethestuffSession();
 	

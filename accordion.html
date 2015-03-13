@@ -201,8 +201,17 @@
 										</label>
 	 									</div>
 							  </div>
+								<hr>
 								
-								<button id="checkoutContinue" type="submit" class="btn btn-default">Continue to Payment</button>
+								<div class="checkbox">
+									<h4>GIFT OPTIONS  <span class="glyphicon glyphicon-gift" aria-hidden="true"><span></h4>
+							    <label>
+							      <input type="checkbox">Add gift options
+							    </label>
+							  </div>
+								
+								
+								<button id="checkoutContinue" type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseExample">Continue to Payment</button>
 								
 							</form>
 							
@@ -223,11 +232,32 @@
 			      <div class="panel-body container">
 							<!-- Payment Form -->
 							<form id="paymentInfo">
-								<p class="checkout-title">CREDIT CARD</p>
+								<div class="row">
+									<h4 class="checkout-title"> CREDIT CARD</h4>
+									<img class="pull-left" src="http://i76.imgup.net/accepted_c22e0.png">							    
+								</div>
+								<br>
+								<div class="row">
+								  
+								  <div class="form-group col-xs-6">
+								    <label for="firstNameCheckout">First Name</label>
+								    <input type="text" class="form-control" id="firstNameCheckout" placeholder="Required">
+								  </div>
+								  
+								  <div class="form-group col-xs-6">
+								    <label for="lastNameCheckout">Last Name</label>
+								    <input type="text" class="form-control" id="lastNameCheckout" placeholder="Required">
+								  </div>
+							  
+							  </div><!-- END: row -->
+							  
+							 
+							  
 							  <div class="form-group">
 								  <!-- FAUX - Hide numbers inputted -->
-							    <label for="cardNumber">Credit Card Number</label>
-							    <input type="password" class="form-control" id="cardNumber" placeholder="Required">
+								
+								  <label for="cardNumber">Card Number</label>
+									<input type="password" class="form-control" id="cardNumber" placeholder="Required">
 							  </div>
 							  <div class="form-group">
 							    <label for="securityCode">Security Code</label>
@@ -247,7 +277,7 @@
 								    </div>
 								    <div class="col-xs-6">
 									    <select class="form-control">
-											  <option>Day</option>
+											  <option>Year</option>
 											  <option>2</option>
 											  <option>3</option>
 											  <option>4</option>
@@ -256,49 +286,62 @@
 								    </div>
 							    </div>
 							  </div>
-							  <div class="form-group">
-							    <label for="firstName1">First Name</label>
-							    <input type="text" class="form-control" id="firstName1" placeholder="Required">
-							  </div>
-							  <div class="form-group">
-							    <label for="lastName1">Last Name</label>
-							    <input type="text" class="form-control" id="lastName1" placeholder="Required">
-							  </div>
 							  <div class="checkbox">
 							    <label>
-							      <input type="checkbox">Save this card for future orders
+							      <input type="checkbox">Save this card for future purchases
 							    </label>
 							  </div>
 							  <br>
+								  <div class="checkbox">
+									  <h4>BILLING ADDRESS</h4>
+								    <label>
+								      <input type="checkbox">Same as shipping address
+								    </label>
+								  </div>
+								  
+								  <!-- ToDo: Output Shipping address here -->
+								  <div class="addressOutputData">
+									  
+								  </div>
+								  
+							  <hr>
+							  
 							  <div class="checkbox">
-								  <h4>GIFT CARD</h4>
+								  <h4>HAVE A GIFT CARD?</h4>
 							    <label>
 							      <input type="checkbox">Use Gift Card, eGift Card, eGift Certificate, or Reward Card
 							    </label>
 							  </div>
-							  <br>
-							  <div class="checkbox">
-								  <h4>BILLING ADDRESS</h4>
-							    <label>
-							      <input type="checkbox">Same as Shipping Address
-							    </label>
+							  <hr>
+							  <div class="form-group">
+								  <h4>ACCOUNT</h4><br />
+								  <p>Set your password so you can check your order status.</p>
+								  <p><small>Email:</small> firstlast@email.com</p>
 							  </div>
 							  
-							  <br>
-							  <div class="form-group">
-								  <h4>PASSWORD</h4>
-								  <p>Set your password so you can check your order status</p>
-								  <label for="password">Password</label>
-								  <input type="password" class="form-control" id="password" placeholder="Required">
+							  <div class="row">
+								  <div class="form-group col-xs-6">
+									  <label for="password">Password</label>
+									  <input type="password" class="form-control" id="password" placeholder="Required">
+								  </div>
+								  <div class="form-group col-xs-6">
+									  <label for="password1">Confirm Password</label>
+									  <input type="password" class="form-control" id="password1" placeholder="Required">
+								  </div>
+								  <div class=""
+								  <p>must between 6 and 12 characters</p> 
+								  <div class="checkbox">
+									  <h4>HAVE A GIFT CARD?</h4>
+								    <label>
+								      <input type="checkbox" checked="true">Yes! Send me exclusive offers, beauty trend alerts, and store news via email.
+								    </label>
+								  </div>
 							  </div>
-							  <div class="form-group">
-								  <label for="password1">Confirm Password</label>
-								  <input type="password" class="form-control" id="password1" placeholder="Required">
-							  </div>
-								
+							  
 								<button id="checkoutContinue" type="submit" class="btn btn-default">Continue to Review</button>
 
 							</form>
+					
 			      </div>
 			    </div>
 			  </div>
@@ -326,7 +369,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/init.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
