@@ -25,43 +25,28 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-<!--
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
--->
-          <a class="navbar-brand" href="#">SEPHORA</a>
+          <a class="navbar-brand" href="#">SEPHORA&nbsp;<small>&nbsp;SECURE&nbsp;CHECKOUT</small></a><span class="glyphicon glyphicon-lock secure-icon"></span>
         </div>
-<!--
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
--->
       </div>
     </nav>
     
-    <div class="container">
+		<ol class="breadcrumb checkout-breadcrumbs">
+		  <li><a href="#">SHIPPING</a></li>
+		  <li><a href="#">PAYMENT</a></li>
+		  <li class="active">REVIEW & PLACE ORDER</li>
+		</ol>
+    
 
-		<div class="page-header">
-		  <h1 class="avalon-book">SECURE CHECKOUT<small>  <span class="glyphicon glyphicon-lock" aria-hidden="true"><span></small></h1>
-		</div>
 	  <div class="secure-checkout">
 		  <!-- start checkout tabbed navigation -->
 		  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-			  <div class="panel panel-default">
+			  <div class="panel panel-default checkout-panel">
 			    <div class="panel-heading" id="shippingAccordion" role="tab" id="headingOne">
 			      <h4 class="panel-title">
-			        <a class="avalon-bold">1.SHIPPING</a>
+			        <a class="avalon-bold">1. SHIPPING</a>
 			        <a class="pull-right" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Edit</a>
 			      </h4>
 			    </div>
@@ -70,48 +55,50 @@
 			    
 			    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 				    
-			      <div class="panel-body">
+			      <div class="panel-body container">
 							<!-- Shipping Form -->
 							<form id="shippingDetails">
-								<p class="checkout-title">SHIPPING DETAILS</p>
-							  <div class="form-group">
-							    <label for="firstNameCheckout">First Name</label>
-							    <input type="text" class="form-control" id="firstNameCheckout" placeholder="">
-							  </div>
-							  <div class="form-group">
-							    <label for="lastNameCheckout">Last Name</label>
-							    <input type="text" class="form-control" id="lastNameCheckout" placeholder="">
-							  </div>
-							  <div class="form-group">
-							    <label for="addressLine1">Address Line 1</label>
-							    <input type="text" class="form-control" id="addressLine1" placeholder="">
-							  </div>
-							  <div class="form-group">
-							    <label for="addressLine2">Address Line 2</label>
-							    <input type="text" class="form-control" id="addressLine2" placeholder="Optional">
-							  </div>
-<!--
-	
-							FOR: Desktop v. use below to column the input fields
-	
+							  
 							  <div class="row">
-								  <div class="col-xs-2">
-								    <input type="text" class="form-control" placeholder=".col-xs-2">
+								  
+								  <div class="form-group col-xs-6">
+								    <label for="firstNameCheckout">First Name</label>
+								    <input type="text" class="form-control" id="firstNameCheckout" placeholder="Required">
 								  </div>
-								  <div class="col-xs-3">
-								    <input type="text" class="form-control" placeholder=".col-xs-3">
+								  
+								  <div class="form-group col-xs-6">
+								    <label for="lastNameCheckout">Last Name</label>
+								    <input type="text" class="form-control" id="lastNameCheckout" placeholder="Required">
 								  </div>
-								  <div class="col-xs-4">
-								    <input type="text" class="form-control" placeholder=".col-xs-4">
-								  </div>
-								</div>
--->
-
+							  
+							  </div><!-- END: row -->
+							  
 							  <div class="form-group">
-							    <label for="zipCode">Zip Code</label>
-							    <input type="number" class="form-control" id="zipCode" placeholder="">
+							    <label for="addressLine1">Address</label>
+							    <input type="text" class="form-control" id="addressLine1" placeholder="Required">
 							  </div>
 							  
+							  <div class="form-group">
+							    <label for="addressLine2">Address 2</label>
+							    <input type="text" class="form-control" id="addressLine2" placeholder="Optional">
+							  </div>
+							  
+							  <div class="form-group">
+							    <label for="zipCode">Zip Code</label>
+							    <input type="text" class="form-control" id="zipCode" placeholder="Required">
+							  </div>
+							  
+							  <div class="form-group">
+							    <label for="cityCart">City</label>
+							    <input type="text" class="form-control" id="cityCart" placeholder="Required">
+							  </div>
+							  
+							  <div class="form-group">
+							    <label for="stateCart">State/Region</label>
+							    <input type="text" class="form-control" id="stateCart" placeholder="Required">
+							  </div>
+							  
+<!--
 							  <div class="form-group">
 							    <label for="stateCart">State/Region</label>
 							    <select id="stateCart" class="form-control">
@@ -168,55 +155,54 @@
 										<option value="WY">Wyoming</option>
 									</select>
 							  </div>
-							  <div class="form-group">
-							    <label for="cityCart">City</label>
-							    <input type="text" class="form-control" id="cityCart" placeholder="">
-							  </div>
+-->
+
 							  <div class="form-group">
 							    <label for="phoneCart">Phone</label>
-							    <input type="tel" class="form-control" id="phoneCart" placeholder="">
+							    <input type="tel" class="form-control" id="phoneCart" placeholder="Required">
 							  </div>							  
+							  
 							  <div class="checkbox">
 							    <label>
-							      <input id="saveAddy" type="checkbox">Save address for future orders
+							      <input id="saveAddy" type="checkbox" checked="true">Set as default address
 							    </label>
 							  </div>
-							   <div class="checkbox">
+							  
+<!--
+							  <div class="checkbox">
 							    <label>
 							      <input type="checkbox">Add gift options <span class="glyphicon glyphicon-gift" aria-hidden="true"><span>
 							    </label>
 							  </div>
+-->
+							  
 							  <br>
-							  <div class="radio">
+							  
+							  <div class="container">
 							  	<h4 class="avalon-demi">SHIPPING METHOD</h4>
-							  	 <div class="row">
-								  <div class="col-xs-12">
+   									<div class="radio">
    									<label>
-								    	<input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> $4.95- standard 3 day <br>
-								    	estimated delivery: Wed. 11/14 to Thurs. 11/15<br>
+								    	<input type="radio" name="blankRadio" id="blankRadio1" value="option1shipping" checked="true" aria-label="..."><h4 class="shipping-radio"><span class="text-danger">FREE</span>- standard 3 day<br><small>estimated delivery: Wed. 11/14 to Thurs. 11/15</small></h4><br>
 										</label>
-								  </div>
-								  <div class="col-xs-12">
+   									</div>
+   									<div class="radio">
 								    <label>
-								    	<input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> $4.95- standard 3 day <br>
-								    	estimated delivery: Wed. 11/13 to Thurs. 11/14<br>
+								    	<input type="radio" name="blankRadio" id="blankRadio1" value="option2shipping" aria-label="..."><h4 class="shipping-radio">$4.95- standard 3 day <br><small>estimated delivery: Wed. 11/13 to Thurs. 11/14</small></h4><br>
 										</label>
-								  </div>
-								  <div class="col-xs-12">
+   									</div>
+	 									<div class="radio">
 								    <label>
-								    	<input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> $4.95- standard 3 day <br>
-								    	estimated delivery: Wed. 11/12 to Thurs. 11/13<br>
+								    	<input type="radio" name="blankRadio" id="blankRadio1" value="option3shipping" aria-label="..."><h4 class="shipping-radio">$10.95- 2 day shipping <br><small>estimated delivery: Wed. 11/12 to Thurs. 11/13</small></h4><br>
 										</label>
-								  </div>
-								</div>
-									<label>
-							    	<input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> $4.95- standard 3 day <br>
-							    	estimated delivery: Wed. 11/13 to Thurs. 11/15<br>
-									</label>
-									
-								</div>
-								<br>
-								<button id="checkoutContinue" class="btn btn-default">Continue to Payment</button>
+	 									</div>
+	 									<div class="radio">
+										<label>
+								    	<input type="radio" name="blankRadio" id="blankRadio1" value="option4shipping" aria-label="..."><h4 class="shipping-radio">$16.95- 1 day shipping <br><small>estimated delivery: Wed. 11/13 to Thurs. 11/15</small></h4><br>
+										</label>
+	 									</div>
+							  </div>
+								
+								<button id="checkoutContinue" type="submit" class="btn btn-default">Continue to Payment</button>
 								
 							</form>
 							
@@ -225,16 +211,16 @@
 			  </div>
 			  
 			  
-			  <div class="panel panel-default">
+			  <div class="panel panel-default checkout-panel">
 			    <div class="panel-heading" role="tab" id="headingTwo">
 			      <h4 class="panel-title">
 			        <a class="collapsed avalon-bold" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-			          2.PAYMENT
+			          2. PAYMENT
 			        </a>
 			      </h4>
 			    </div>
 			    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-			      <div class="panel-body">
+			      <div class="panel-body container">
 							<!-- Payment Form -->
 							<form id="paymentInfo">
 								<p class="checkout-title">CREDIT CARD</p>
@@ -250,7 +236,7 @@
 							  <div class="form-group">
 							    <label for="addressLine2">Expiration Date</label>
 							    <div class="row">
-								    <div class="col-xs-4 pull-left">
+								    <div class="col-xs-6">
 									    <select class="form-control">
 											  <option>Month</option>
 											  <option>2</option>
@@ -259,7 +245,7 @@
 											  <option>5</option>
 											</select>
 								    </div>
-								    <div class="col-xs-4">
+								    <div class="col-xs-6">
 									    <select class="form-control">
 											  <option>Day</option>
 											  <option>2</option>
@@ -316,11 +302,11 @@
 			      </div>
 			    </div>
 			  </div>
-			  <div class="panel panel-default">
+			  <div class="panel panel-default checkout-panel">
 			    <div class="panel-heading" role="tab" id="headingThree">
 			      <h4 class="panel-title">
 			        <a class="collapsed avalon-bold" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-			          3.REVIEW
+			          3. REVIEW
 			        </a>
 			      </h4>
 			    </div>
@@ -332,7 +318,7 @@
 			  </div>
 			</div>
 	  </div>
-    </div><!-- /.container -->
+    <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript

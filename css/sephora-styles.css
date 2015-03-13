@@ -44,8 +44,9 @@ html {
 body {
   padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
+
+.secure-checkout {
+/*   padding-top: 20px; */
   text-align: left;
 }
 
@@ -53,8 +54,27 @@ body {
 	font-size: 21px;
 	font-family: 'Avalon-Demi';
   font-weight: 600;
-  letter-spacing: 6px;
-  color: white !important;
+  letter-spacing: 4px;
+  color: #000 !important;
+  height: 60px;
+}
+
+.navbar-inverse {
+  background-color: #FFF;
+  border-color: #333;
+}
+
+.secure-icon {
+	top: 17px;
+}
+
+.checkout-breadcrumbs {
+	margin-top: 20px;
+	background-color: #ffffff;
+}
+
+.checkout-breadcrumbs a {
+	color: black;
 }
 
 hr {
@@ -65,29 +85,30 @@ hr {
   border-top: 1px solid #e4e4e4
 }
 
+/* Hide Stuff */
+#shippingMethod {
+/* 	display: none; */
+}
+
 /* TYPOGRAPHY */
 .avalon-book {
     font-family: 'Avalon-Book';
     font-weight: 400
 }
-
 .avalon-medium {
     font-family: 'Avalon-Medium';
     font-weight: 500;
     letter-spacing: 3px
 }
-
 .avalon-demi {
     font-family: 'Avalon-Demi';
     font-weight: 600
 }
-
 .avalon-bold {
     font-family: 'Avalon-Bold';
     font-weight: 700;
     letter-spacing: 4px
 }
-
 .addressOutputData {
   padding-top: 10px;
   padding-left: 35px;
@@ -116,12 +137,10 @@ hr {
 	-webkit-transition: all .3s;
 	transition: all .3s
 }
-
 #checkoutContinue {
 /* 	float: right; */
   width: 100%;
 }
-
 .btn-default {
 	color: #fff !important;
 	background-color: #c00;
@@ -132,11 +151,9 @@ hr {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc0000',endColorstr='#ffa30000',GradientType=0);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
 }
-
 .btn-default a {
 	color: #ffffff !important;
 }
-
 .btn-default:hover {
 	color: #fff;
 	background-color: #000000;
@@ -148,7 +165,51 @@ hr {
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
 }
 
-/* Hide Stuff */
-#shippingMethod {
-/* 	display: none; */
+
+/* PANEL STYLES */
+.checkout-panel {
+	border-radius: 0px !important;
+	border-color: transparent;
+}
+
+.panel-default > .panel-heading {
+  color: #000000;
+  background-color: #cccccc;
+}
+.panel-group .panel-heading {
+  border-bottom: 0;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.panel-title a {
+	text-decoration: none !important;
+}
+
+/* FORM CONTROLS */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.shipping-radio {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
 }
