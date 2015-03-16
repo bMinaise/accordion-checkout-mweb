@@ -68,7 +68,7 @@ $(document).ready(function() {
 //window session storage and localStorage 
 //session will expire on page close, localStorage should not
 window.onload  = function(){
-	//loadvalues();
+	loadvalues();
 	
 	
 	// this invokes a callback once the div of a specific id 
@@ -77,11 +77,11 @@ window.onload  = function(){
         //console.log("a clicked");
 				//MAKE THIS OPEN THE PANEL AND HIDE THE OUTPUT DATA
 
-		//savethestuffSession();
+		savethestuffSession();
  	//$('form').submit(false);
 
 		$("#collapseOne").collapse();
-						
+		$("#collapseTwo").collapse();				
 	})
 };
 
@@ -162,3 +162,10 @@ function getCheckoutAddress(){
 
 	}
 }
+
+addEventListener('storage', function(e){
+	var firstName = document.getElementById('firstNameCheckout');
+	if (e.oldValue){
+		alert('changed from \''+e.oldValue+'\' to \''+e.newValue+'\'');
+	}
+}, false);

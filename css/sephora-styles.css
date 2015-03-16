@@ -33,7 +33,7 @@
     font-style: normal
 }
 
-
+/* LAYOUT */
 
 html {
     font-family: sans-serif;
@@ -51,6 +51,12 @@ body {
   text-align: left;
 }
 
+/* NAVBAR */
+
+.navbar {
+	min-height: 42px;
+}
+
 .navbar-brand {
 	font-size: 21px;
 	font-family: 'Avalon-Demi';
@@ -58,19 +64,35 @@ body {
   letter-spacing: 4px;
   color: #000 !important;
   height: 60px;
+  float: none;
+  margin: 0 auto;
+  margin-top: 13px;
 }
 
 .navbar-inverse {
   background-color: #FFF;
   border-color: #333;
+  margin-top: 13px;
 }
+
+.securityCode {
+	float: right;
+}
+
+.navbar-header {
+	float: none !important;
+	text-align: center !important;
+	margin: 0 auto !important;
+}
+
 
 .secure-icon {
 /* 	top: 0px; */
 }
 
 .checkout-breadcrumbs {
-	margin-top: 20px;
+	margin-top: 13px;
+	margin-bottom: 4px;
 	background-color: #ffffff;
 }
 
