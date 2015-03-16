@@ -119,20 +119,20 @@ hr {
 
 /* TYPOGRAPHY */
 .avalon-book {
-    font-family: 'Avalon-Book';
+    font-family: 'Avalon-Book',sans-serif;
     font-weight: 400
 }
 .avalon-medium {
-    font-family: 'Avalon-Medium';
+    font-family: 'Avalon-Medium',sans-serif;
     font-weight: 500;
     letter-spacing: 3px
 }
 .avalon-demi {
-    font-family: 'Avalon-Demi';
+    font-family: 'Avalon-Demi',sans-serif;
     font-weight: 600
 }
 .avalon-bold {
-    font-family: 'Avalon-Bold';
+    font-family: 'Avalon-Bold',sans-serif;
     font-weight: 700;
     letter-spacing: 4px
 }
