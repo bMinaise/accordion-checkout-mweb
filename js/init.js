@@ -92,6 +92,16 @@ window.onload  = function(){
 		$("#collapseTwo").collapse();
 		$("#collapseThree").collapse();				
 	})
+	
+	$('button').click(function(evt){  
+    if(evt.target.id == 'checkoutAccount')
+
+		savethestuffSession();
+		
+		$("collapseOne").collapse();
+		$("#collapseThree").collapse();
+		$("#collapseFour").collapse();				
+	})
 
 };
 

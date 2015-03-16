@@ -180,6 +180,9 @@ hr {
 #checkoutReview {
 	width: 100%;
 }
+#checkoutAccount {
+	width: 100%;
+}
 .btn-default {
 	color: #fff !important;
 	background-color: #c00;
