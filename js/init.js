@@ -83,13 +83,23 @@ window.onload  = function(){
 		$("#collapseOne").collapse();
 		$("#collapseTwo").collapse();				
 	})
+	
+	$('button').click(function(evt){  
+    if(evt.target.id == 'checkoutReview')
+
+		savethestuffSession();
+
+		$("#collapseTwo").collapse();
+		$("#collapseThree").collapse();				
+	})
+
 };
 
 //fire function to start capturing and saving data
 function loadvalues(){
 	//getthestuffSession(); //get the session storage data
 	//getthestuffLocal(); //get the local storage data
-	//getCheckoutAddress();
+	getCheckoutAddress();
 	
 	//savethestuffSession();
 	
@@ -107,6 +117,7 @@ function savethestuffSession(){
 	var cityCart  = document.getElementById("cityCart");
 	var phoneCart = document.getElementById("phoneCart");
 	var saveAddy  = document.getElementById("saveAddy");
+	var saveCard  = document.getElementById("cardNumber");
 	
 	console.log('inside savethestuffSession');
 	
@@ -119,6 +130,7 @@ function savethestuffSession(){
 	var cityCartValue  = cityCart.value;
 	var phoneCartValue = phoneCart.value;
 	var saveAddyValue  = saveAddy.value;
+	var saveCardValue  = saveCard.value;
 	
 	sessionStorage.setItem(1, firstNameValue); //store the value with a key as 1 LONGWAY!
 	sessionStorage.setItem(2, lastNameValue);
@@ -129,6 +141,7 @@ function savethestuffSession(){
 	sessionStorage.setItem(7, cityCartValue);
 	sessionStorage.setItem(8, phoneCartValue);
 	sessionStorage.setItem(9, saveAddyValue);
+	sessionStorage.setItem(10, saveCardValue);
 	
 	//getthestuffSession(); //fire get data -- Can be executed multiple times to capture each dataset
 	getCheckoutAddress(); //fire get first part of form
@@ -140,18 +153,19 @@ function getCheckoutAddress(){
 	var addressData;
 	var thediv = document.getElementById("formOneOutput");
 		
-	firstData = sessionStorage.getItem(1);
-	lastData = sessionStorage.getItem(2)
+	firstData    = sessionStorage.getItem(1);
+	lastData     = sessionStorage.getItem(2)
 	address1Data = sessionStorage.getItem(3);
 	address2Data = sessionStorage.getItem(4);
-	zipCodeData = sessionStorage.getItem(5);
-	stateData = sessionStorage.getItem(6);
-	cityData = sessionStorage.getItem(7);
-	phoneData = sessionStorage.getItem(8);
-	saveInfoData = sessionStorage.getItem(9);
+	zipCodeData  = sessionStorage.getItem(5);
+	stateData    = sessionStorage.getItem(6);
+	cityData     = sessionStorage.getItem(7);
+	phoneData    = sessionStorage.getItem(8);
+	saveAddress  = sessionStorage.getItem(9);
+	saveCardData = sessionStorage.getItem(10);
 	
 	if (firstData){
-		thediv.innerHTML = "<div class='container addressOutputData'><p>"+firstData+" "+lastData+"</p><p>"+address1Data+"</p><p>"+address2Data+"</p><p>"+cityData+" ,"+stateData+" "+zipCodeData+"</p><p>"+phoneData+"</p></div>";
+		thediv.innerHTML = "<div class='container addressOutputData'><h4>SHIPPING TO:</h4><br><p><strong>"+firstData+" "+lastData+"</strong></p><p>"+address1Data+"</p><p>"+address2Data+"</p><p>"+cityData+" ,"+stateData+" "+zipCodeData+"</p><p>Phone: "+phoneData+"</p><br><p><h5 class='shipping-radio'><span class='text-danger'>FREE</span>- standard 3 day<br><small>estimated delivery: Wed. 11/14 to Thurs. 11/15</small></h5></div>";
 		
 		//collapse shipping section - open up payment
 		//$("#collapseOne").collapse();

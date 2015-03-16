@@ -36,9 +36,13 @@
 /* LAYOUT */
 
 html {
-    font-family: sans-serif;
+  	font-family: avalon,"Helvetica Neue",Helvetica,Arial,sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
+}
+
+.container {
+	  font-family: avalon,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 body {
@@ -133,10 +137,15 @@ hr {
     letter-spacing: 4px
 }
 .addressOutputData {
+/*
   padding-top: 10px;
   padding-left: 35px;
+*/
   font-weight: 300;
   line-height: 13px;
+  background-color: rgba(0,0,0,0.1);
+  padding: 15px 15px;
+  margin: 10px 10px;
 }
 
 
