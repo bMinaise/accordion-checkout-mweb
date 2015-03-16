@@ -94,7 +94,7 @@ body {
 }
 
 .checkout-breadcrumbs {
-	margin-top: 13px;
+	margin-top: 0;
 	margin-bottom: 4px;
 	background-color: #ffffff;
 }
@@ -147,6 +147,11 @@ hr {
   margin: 10px 10px;
 }
 
+.addressOutput {
+  line-height: 10px;
+  padding-left: 21px;
+}
+
 
 /* BTN Styles */
 .btn {
@@ -171,6 +176,9 @@ hr {
 #checkoutContinue {
 /* 	float: right; */
   width: 100%;
+}
+#checkoutReview {
+	width: 100%;
 }
 .btn-default {
 	color: #fff !important;
@@ -198,6 +206,9 @@ hr {
 
 
 /* PANEL STYLES */
+.panel {
+  margin-bottom: 5px;
+}
 .checkout-panel {
 	border-radius: 0px !important;
 	border-color: transparent;

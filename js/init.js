@@ -152,6 +152,7 @@ function getCheckoutAddress(){
 	//console.log('getCheckoutAddress');
 	var addressData;
 	var thediv = document.getElementById("formOneOutput");
+	//var locdiv = document.getElementById("addressOutput");
 		
 	firstData    = sessionStorage.getItem(1);
 	lastData     = sessionStorage.getItem(2)
@@ -167,6 +168,8 @@ function getCheckoutAddress(){
 	if (firstData){
 		thediv.innerHTML = "<div class='container addressOutputData'><h4>SHIPPING TO:</h4><br><p><strong>"+firstData+" "+lastData+"</strong></p><p>"+address1Data+"</p><p>"+address2Data+"</p><p>"+cityData+" ,"+stateData+" "+zipCodeData+"</p><p>Phone: "+phoneData+"</p><br><p><h5 class='shipping-radio'><span class='text-danger'>FREE</span>- standard 3 day<br><small>estimated delivery: Wed. 11/14 to Thurs. 11/15</small></h5></div>";
 		
+		$( ".addressOutput" ).html( "<p><strong>"+firstData+" "+lastData+"</strong></p><p>"+address1Data+"</p><p>"+address2Data+"</p><p>"+cityData+" ,"+stateData+" "+zipCodeData+"</p><p>Phone: "+phoneData+"</p>" );
+		
 		//collapse shipping section - open up payment
 		//$("#collapseOne").collapse();
 		//$("#collapseTwo").collapse();
@@ -175,6 +178,7 @@ function getCheckoutAddress(){
 		$("#collapseTwo").collapse();
 
 	}
+
 }
 
 addEventListener('storage', function(e){

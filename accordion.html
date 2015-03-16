@@ -41,9 +41,10 @@
 			</ol>
 
 
-	  <div class="secure-checkout">
+<!-- 	  <div class="secure-checkout"> -->
 		  <!-- start checkout tabbed navigation -->
-		  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		  
+<!-- 		  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> -->
 			  <div class="panel panel-default checkout-panel">
 			    <div class="panel-heading" id="shippingAccordion" role="tab" id="headingOne">
 			      <h4 class="panel-title">
@@ -235,16 +236,17 @@
 							      <input type="checkbox">Save this card for future purchases
 							    </label>
 							  </div>
-							  <br>
+							 
+							  <hr>
 								  <div class="checkbox">
 									  <h4>BILLING ADDRESS</h4>
 								    <label>
-								      <input type="checkbox">Same as shipping address
+								      <input type="checkbox" checked="true">Same as shipping address
 								    </label>
 								  </div>
 								  
 								  <!-- ToDo: Output Shipping address here -->
-								  <div class="addressOutputData">
+								  <div class="addressOutput">
 									  
 								  </div>
 								  
@@ -256,35 +258,10 @@
 							      <input type="checkbox">Use Gift Card, eGift Card, eGift Certificate, or Reward Card
 							    </label>
 							  </div>
-							  <hr>
-							  <div class="form-group">
-								  <h4>ACCOUNT</h4><br />
-								  <p>Set your password so you can check your order status.</p>
-								  <p><small>Email:</small> firstlast@email.com</p>
-							  </div>
-							  
-							  <div class="row">
-								  <div class="form-group col-xs-6">
-									  <label for="password">Password</label>
-									  <input type="password" class="form-control" id="password" placeholder="Required">
-								  </div>
-								  <div class="form-group col-xs-6">
-									  <label for="password1">Confirm Password</label>
-									  <input type="password" class="form-control" id="password1" placeholder="Required">
-								  </div>
-								  <div class=""
-								  <p>must between 6 and 12 characters</p> 
-								  <div class="checkbox">
-									  <h4>HAVE A GIFT CARD?</h4>
-								    <label>
-								      <input type="checkbox" checked="true">Yes! Send me exclusive offers, beauty trend alerts, and store news via email.
-								    </label>
-								  </div>
-							  </div>
-							  
+							  							  
 							  <button id="checkoutReview" type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseExample">Continue to Review</button>
 								
-								<button id="checkoutContinue" type="submit" class="btn btn-default">Continue to Review</button>
+<!-- 								<button id="checkoutContinue" type="submit" class="btn btn-default">Continue to Review</button> -->
 
 							</form>
 					
@@ -304,7 +281,36 @@
 			      <div class="panel-body">
 							<!-- INSERT FORM HERE -->
 							
-							
+							<div class="container">
+								<div class="form-group">
+								  <h4>ACCOUNT</h4><br />
+								  <p>Set your password so you can check your order status.</p>
+								  <p><small>Email:</small> firstlast@email.com</p>
+							  </div>
+							  
+							  <div class="row">
+								  <div class="form-group col-xs-6">
+									  <label for="password">Password</label>
+									  <input type="password" class="form-control" id="password" placeholder="Required">
+								  </div>
+								  <div class="form-group col-xs-6">
+									  <label for="password1">Confirm</label>
+									  <input type="password" class="form-control" id="password1" placeholder="Required">
+								  </div>
+								  <div class="col-xs-12">
+								  	<p>must between 6 and 12 characters</p>
+								  </div>
+								  <div class="col-xs-12"> 
+									  <div class="checkbox">
+										  <h4>HAVE A GIFT CARD?</h4>
+									    <label>
+									      <input type="checkbox" checked="true">Yes! Send me exclusive offers, beauty trend alerts, and store news via email.
+									    </label>
+									  </div>
+								  </div>
+							  </div>
+								
+							</div>
 							
 							
 			      </div>
