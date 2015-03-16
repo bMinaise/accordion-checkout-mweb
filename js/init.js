@@ -102,7 +102,12 @@ window.onload  = function(){
 		$("#collapseThree").collapse();
 		$("#collapseFour").collapse();				
 	})
-
+	
+	$("#signInBtn").on('click', function(){
+     window.location = "accordion.html";  
+     console.log('btn clicked');  
+});
+	
 };
 
 //fire function to start capturing and saving data
